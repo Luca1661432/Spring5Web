@@ -13,9 +13,6 @@ public class Publisher {
     private String name;
     private String address;
 
-    @OneToOne
-    private Set<Book> books;
-
     public Publisher(){
     }
 
@@ -40,19 +37,12 @@ public class Publisher {
         this.address = address;
     }
 
-    public Set<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(Set<Book> books) {
-        this.books = books;
-    }
-
     @Override
     public String toString() {
         return "Publisher{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address +
                 '}';
     }
 
